@@ -12,3 +12,5 @@
 
 results/
 **/*.pt
+wandb/
+trained_models/

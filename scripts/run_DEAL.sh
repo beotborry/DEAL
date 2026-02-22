@@ -12,10 +12,10 @@ do
    
    TABULAR_INPUT1="--tabular-input mmse cdrsb adas11 age_dummy gender educat faq"
 
-   CUDA_VISIBLE_DEVICES=0 python3 main.py --method film_demo --film-only-last --date deal --film-aux-net-act silu $TABULAR_INPUT1 --seed $seed --test-set-id $tid --lr 3e-6 --mri-modelpath ./trained_models/250120_ad_pretrained/mri/ad_year3/seed0_sub_seed0_tid0_epochs100_bs4_lr0.0001_decay0.001_snp_versionmissing1_augspatial_only_aug_isNone_lamb1.0_last_no_th.pt $DEFAULT &
-   CUDA_VISIBLE_DEVICES=1 python3 main.py --method film_demo --film-only-last --date deal --film-aux-net-act silu $TABULAR_INPUT1 --seed $seed --test-set-id $tid --lr 5e-6 --mri-modelpath ./trained_models/250120_ad_pretrained/mri/ad_year3/seed0_sub_seed0_tid0_epochs100_bs4_lr0.0001_decay0.001_snp_versionmissing1_augspatial_only_aug_isNone_lamb1.0_last_no_th.pt $DEFAULT & 
-   CUDA_VISIBLE_DEVICES=2 python3 main.py --method film_demo --film-only-last --date deal --film-aux-net-act silu $TABULAR_INPUT1 --seed $seed --test-set-id $tid --lr 1e-5 --mri-modelpath ./trained_models/250120_ad_pretrained/mri/ad_year3/seed0_sub_seed0_tid0_epochs100_bs4_lr0.0001_decay0.001_snp_versionmissing1_augspatial_only_aug_isNone_lamb1.0_last_no_th.pt $DEFAULT & 
-   CUDA_VISIBLE_DEVICES=3 python3 main.py --method film_demo --film-only-last --date deal --film-aux-net-act silu $TABULAR_INPUT1 --seed $seed --test-set-id $tid --lr 3e-5 --mri-modelpath ./trained_models/250120_ad_pretrained/mri/ad_year3/seed0_sub_seed0_tid0_epochs100_bs4_lr0.0001_decay0.001_snp_versionmissing1_augspatial_only_aug_isNone_lamb1.0_last_no_th.pt $DEFAULT & wait
+   CUDA_VISIBLE_DEVICES=0 python3 main.py --method film_demo --film-only-last --date deal --film-aux-net-act silu $TABULAR_INPUT1 --seed $seed --test-set-id $tid --lr 3e-6  $DEFAULT &
+   CUDA_VISIBLE_DEVICES=1 python3 main.py --method film_demo --film-only-last --date deal --film-aux-net-act silu $TABULAR_INPUT1 --seed $seed --test-set-id $tid --lr 5e-6  $DEFAULT & 
+   CUDA_VISIBLE_DEVICES=2 python3 main.py --method film_demo --film-only-last --date deal --film-aux-net-act silu $TABULAR_INPUT1 --seed $seed --test-set-id $tid --lr 1e-5  $DEFAULT & 
+   CUDA_VISIBLE_DEVICES=3 python3 main.py --method film_demo --film-only-last --date deal --film-aux-net-act silu $TABULAR_INPUT1 --seed $seed --test-set-id $tid --lr 3e-5  $DEFAULT & wait
 
 
 done

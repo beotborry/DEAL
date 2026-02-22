@@ -1,6 +1,6 @@
 # DEAL
 
-Fairness-aware MRI training pipeline for Alzheimer's disease (AD) prediction, combining 3D MRI with tabular clinical/demographic features via multiple fusion methods.
+Group robustness-aware MRI training pipeline for Alzheimer's disease (AD) prediction, combining 3D MRI with tabular clinical/demographic features via multiple fusion methods.
 
 ## Overview
 
@@ -18,9 +18,11 @@ DEAL supports:
 - [TorchIO](https://github.com/fepegar/torchio) (MRI loading and transforms)
 - MONAI (for `monai_resnet18` backbone)
 - pandas, numpy, scipy, scikit-learn
-- wandb (logging; can be disabled via `WANDB_MODE=disabled`)
 
 Place data under `--data-dir` (default: `./data/`). The pipeline expects NIfTI MRI volumes (e.g. `brain_to_MNI_syn_n4.nii.gz`) and a CSV/table with subject IDs, labels, and tabular features (e.g. MMSE, CDRSB, ADAS11, age, gender, education, FAQ). Dataset splitting and target definitions follow the logic in `datasets/generic_dataset.py` and `datasets/mri_dataset.py`.
+
+## AD/CN pretrained weights
+Weights of pretrained models trained with AD/CN clssification are provided in https://drive.google.com/drive/folders/1VgpcKJDJJza9II9LzZVwy7OgQ96m8zel?usp=sharing. 
 
 ## Quick start
 

@@ -64,7 +64,7 @@ class MRIDataset(GenericDataset):
 
         self.age_mean, self.age_std = None, None
         self.normalize = normalize
-        if demo_concat or normalize:
+        if normalize:
             df_train["PTAGE"] = df_train["PTAGE"].astype('float32')
             df_val["PTAGE"] = df_val["PTAGE"].astype('float32')
             df_test["PTAGE"] = df_test["PTAGE"].astype('float32')
