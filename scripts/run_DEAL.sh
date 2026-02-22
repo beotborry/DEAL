@@ -8,7 +8,7 @@ for tid in $TIDS
 do
 for seed in $SEEDS
 do
-   DEFAULT="--save-model --film-aux-net mlp --last-eval-only --resolution 1mm --pretrained --epochs 1 --optimizer Adam --batch-size 4 --term 10 --data mri --mode train --mri-arch monai_resnet18 --scheduler cosine_no_repeat --target ad_time_cox --no-best-th --weight-decay 0.001 --normalize"
+   DEFAULT="--save-model --film-aux-net mlp --last-eval-only --resolution 1mm --pretrained --epochs 1 --optimizer Adam --batch-size 4 --term 10 --data mri --mode train --mri-arch monai_resnet18 --scheduler cosine_no_repeat --target ad_transition --no-best-th --weight-decay 0.001 --normalize"
    
    TABULAR_INPUT1="--tabular-input mmse cdrsb adas11 age_dummy gender educat faq"
 
