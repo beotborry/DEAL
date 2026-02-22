@@ -13,13 +13,17 @@ DEAL supports:
 
 ## Requirements
 
-- Python 3
-- PyTorch
-- [TorchIO](https://github.com/fepegar/torchio) (MRI loading and transforms)
-- MONAI (for `monai_resnet18` backbone)
-- pandas, numpy, scipy, scikit-learn
+```bash
+uv venv --python=3.10
 
-Place data under `--data-dir` (default: `./data/`). The pipeline expects NIfTI MRI volumes (e.g. `brain_to_MNI_syn_n4.nii.gz`) and a CSV/table with subject IDs, labels, and tabular features (e.g. MMSE, CDRSB, ADAS11, age, gender, education, FAQ). Dataset splitting and target definitions follow the logic in `datasets/generic_dataset.py` and `datasets/mri_dataset.py`.
+source .venv/bin/activate
+
+uv pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121
+uv pip install monai --no-deps
+uv pip install numpy==1.26.4
+uv pip install scikit-learn scikit-survival pandas torchio wandb
+```
+
 
 ## AD/CN pretrained weights
 Weights of pretrained models trained with AD/CN clssification are provided in https://drive.google.com/drive/folders/1VgpcKJDJJza9II9LzZVwy7OgQ96m8zel?usp=sharing. 
