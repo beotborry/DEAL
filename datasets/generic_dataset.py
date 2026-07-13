@@ -91,9 +91,7 @@ class GenericDataset(data.Dataset):
             df_mri.loc[:, 'ad_time'] = (df_mri.loc[:, 'ad_examdate'] - df_mri.loc[:, 'scandate']).dt.days
             df_mri.loc[df_mri['ad_transition'] == 0, 'ad_time'] = -1 * df_mri.loc[df_mri['ad_transition'] == 0, 'ad_time']
             
-            df_mri = df_mri[~df_mri['SubjectID'].isin(noisy_ad_subs)]
-            df_mri = df_mri[~df_mri['SubjectID'].isin(['052S7037'])] # ad examdate is Nan
-            
+            df_mri = df_mri[~df_mri['SubjectID'].isin(noisy_ad_subs)]            
             df_mri.loc[:, 'Dx_num'] = -1
             
         elif target == 'ad':
