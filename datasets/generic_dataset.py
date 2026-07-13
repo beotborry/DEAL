@@ -8,9 +8,7 @@ from sklearn.model_selection import train_test_split
 
 
 home = expanduser("~")
-noisy_ad_subs = ['016S0702', '037S0566', '128S0135', '037S6222', '136S0429', '023S6535', '094S2367', '141S2210', '011S2274', '128S2130', '019S4293',
-                 '036S4899', '141S4426', '031S4947', '031S4005', '036S4430', '094S4434', '037S4706', '035S4114', '009S4741', '002S4746', 
-                 '941S4420',]
+noisy_ad_subs = [] # the list of subjectID whose diagnosis history includes AD -> MCI
 
 class GenericDataset(data.Dataset):
     def __init__(self, mri_root=None, split="train", transform=None, seed=0, target='ad', resolution='1mm'):
